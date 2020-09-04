@@ -48,3 +48,13 @@ Good:
 
 ## Authentication
 [TODO]
+
+## Redux Dev Tools
+This project is set up to use the Redux DevTools extension, available for Chrome and Firefox only. Installation instructions are in the [zalmoxisus/redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension#installation) repo.
+
+### Redux Dev Tools Tips
+
+#### Persisting state across reloads
+To keep state and action history across full page refreshes, start a debug session with:
+```http://localhost:3000/?debug_session=[some_string]```
+At the end of the session, remove the debug_session param to prevent false bugs.
