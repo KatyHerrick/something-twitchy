@@ -2,13 +2,32 @@
 
 A WIP Twitch-like application.
 
-To run this project, you must create a `src/credentials/gapi.js` file that looks like this:
-```javascript
-export const gapiCreds = {
-	clientId: '[your-id-here].apps.googleusercontent.com'
-};
-```
-A clientId is generated when you set up OAuth for an app through the [Google Developer Console](http://console.developers.google.com/).
+## Running Locally
+1. Set up OAuth for a new app through the [Google Developer Console](http://console.developers.google.com/). Keep all default configurations, except add `http://localhost:3000` as an Authorized JavaScript origin URI.
+1. Insert the created Google clientId into `src/credentials/gapi.js`.
+1. In the `/api` directory, install dependencies with
+	```bash
+	yarn install
+	```
+1. In the `/client` directory, install dependencies with
+	```bash
+	yarn install
+	```
+1. Run the following to ignore changes to the json "database" and changes to personal credentials.
+	```bash
+	git update-index --assume-unchanged api/db.json
+	git update-index --assume-unchanged client/src/credentials/gapi.js
+	```
+1. In the `/api` directory, run
+	```bash
+	yarn start
+	```
+The API server will run at `localhost:3001`.
+1. In another tab, navigate to the `/client` directory and run
+	```bash
+	yarn start
+	```
+The React client will run at `localhost:3000`.
 
 ## Routing
 
