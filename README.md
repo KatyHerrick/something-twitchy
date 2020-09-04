@@ -2,6 +2,14 @@
 
 A WIP Twitch-like application.
 
+To run this project, you must create a `src/credentials/gapi.js` file that looks like this:
+```javascript
+export const gapiCreds = {
+	clientId: '[your-id-here].apps.googleusercontent.com'
+};
+```
+A clientId is generated when you set up OAuth for an app through the [Google Developer Console](http://console.developers.google.com/).
+
 ## Routing
 
 ### Types of Routers
@@ -37,3 +45,6 @@ Good:
 ```javascript
 <Link to="/pagetwo">Navigate to Page Two</Link>
 ```
+
+## Authentication
+[TODO]
