@@ -65,6 +65,23 @@ Good:
 <Link to="/pagetwo">Navigate to Page Two</Link>
 ```
 
+#### Loading and fetching state
+Each component should be designed to work in isolation. When routing between pages, it's not guaranteed that the "index" component responsible for initializing data will be accessed first. Each component must fetch it's own data.
+
+Bad:
+```javascript
+import { updateData } from '../../actions';
+
+class EditPage extends React.Component { ... }
+```
+
+Good:
+```javascript
+import { fetchData, updateData } from '../../actions';
+
+class EditPage extends React.Component { ... }
+```
+
 ## Authentication
 [TODO]
 
