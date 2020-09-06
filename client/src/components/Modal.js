@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import history from '../history';
 
 const Modal = ({ title, content, actions, onDismiss }) => {
 	return ReactDOM.createPortal(
