@@ -34,6 +34,8 @@ The React client will run at `localhost:3000`.
 	```
 The Real Time Messaging Protocol server will expose its content to the browser on port 8000, but will accept Open Broadcaster Software (OBS) connections on port 1935.
 
+To stream with OBS, follow the instructions for configuring your stream [here](https://github.com/illuspas/Node-Media-Server#from-obs).
+
 ## Routing
 
 ### Types of Routers
