@@ -1,6 +1,6 @@
 # Something Twitchy
 
-A WIP Twitch-like application.
+A Twitch-like stream-watching application with a React front-end, a [json-server](https://github.com/typicode/json-server) data store, and a [Node-Media-Server](https://github.com/illuspas/Node-Media-Server) Real Time Messaging Protocol (RTMP) server to connect to a streamer's Open Broadcaster Software (OBS).
 
 ## Running Locally
 1. Set up OAuth for a new app through the [Google Developer Console](http://console.developers.google.com/). Keep all default configurations, except add `http://localhost:3000` as an Authorized JavaScript origin URI.
@@ -32,9 +32,26 @@ The React client will run at `localhost:3000`.
 	```bash
 	yarn start
 	```
-The Real Time Messaging Protocol server will expose its content to the browser on port 8000, but will accept Open Broadcaster Software (OBS) connections on port 1935.
+The RTMP server will expose its content to the browser on port 8000, but will accept OBS connections on port 1935.
 
 To stream with OBS, follow the instructions for configuring your stream [here](https://github.com/illuspas/Node-Media-Server#from-obs).
+
+## Screenshots
+
+List of all streams owned by all users, before signing in.
+![Image of Home Page](./screenshots/before_auth.png)
+
+List of all streams after signing in, now with admin buttons.
+![Image of Edit Page](./screenshots/all_streams.png)
+
+Example Edit Page. (Very similar to the Create Stream page, but pre-fileld with existing values.)
+![Image of Edit Page](./screenshots/all_streams.png)
+
+My local OBS stream settings to broadcast to the location the Watch Stream page is listening on.
+![Image of OBS Settings](./screenshots/obs_settings.png)
+
+Example of a stream visible within the app.
+![Image of Live Stream](./screenshots/live_stream.png)
 
 ## Routing
 
