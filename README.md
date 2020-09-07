@@ -22,12 +22,17 @@ A WIP Twitch-like application.
 	```bash
 	yarn start
 	```
-The API server will run at `localhost:3001`.
+The API server will run at `localhost:3001` .
 1. In another tab, navigate to the `/client` directory and run
 	```bash
 	yarn start
 	```
 The React client will run at `localhost:3000`.
+1. In a third tab, navigate to the `/rtmpserver` directory and run
+	```bash
+	yarn start
+	```
+The Real Time Messaging Protocol server will expose its content to the browser on port 8000, but will accept Open Broadcaster Software (OBS) connections on port 1935.
 
 ## Routing
 
